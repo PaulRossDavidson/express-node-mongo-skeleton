@@ -4,13 +4,16 @@ block content
 	h1.
 		#{title}
 	form#formAddBlob(name="addblob",method="post",action="/blobs")
-		p Name: 
-			input#inputName(type="text", placeholder="ex. John Smith", name="name")
-		p Badge:
-			input#inputBadge(type="number", placeholder="ex. 123456", name="badge")
-		p DOB: 
-			input#inputDob(type="date", name="dob")
-		p Are You Loved?: 
-			input#inputIsLoved(type="checkbox", name="isloved")
+		p Title:
+			input#inputTitle(type="string", placeholder="Defender 110", name="title")
+		p Description:
+			input#inputDescription(type="string", placeholder="Trail tested", name="description")
+		p Price:
+			input#inputPrice(type="number", placeholder="$15,000", name="price")
+		p Year:
+			input#inputYear(type="date", placeholder="1990", name="year")
+		p Location:
+			input#inputLocation(type="string", placeholder="Seattle", name="location")
+
 		p
 			button#btnSubmit(type="submit") submit

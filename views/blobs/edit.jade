@@ -4,14 +4,16 @@ block content
 	h1.
 		Blob ID #{blob._id}
 	form(action='/blobs/#{blob._id}/edit',method='post',name='updateblob',enctype='application/x-www-form-urlencoded')
-		p Name:
-			input#inputName(type='text', value='#{blob.name}', name='name')
-		p Badge:
-			input#inputBadge(type='number', value='#{blob.badge}', name='badge')
-		p DOB:
-			input#inputDob(type='date', value='#{blobdob}', name='dob')
-		p Are you Loved?:
-			input#inputIsLoved(type='checkbox', name='isloved', checked=('#{blob.isloved}'==='true' ? "checked" : undefined))
+		p Title:
+			input#inputTitle(type='string', value='#{blob.title}', name='title')
+		p Description:
+			input#inputDescription(type='string', value='#{blob.description}', name='description')
+		p Price:
+			input#inputPrice(type='string', value='#{blob.price}', name='price')
+		p Year:
+			input#inputYear(type='string', value='#{blob.year}', name='year')
+		p Location:
+			input#inputLocation(type='string', value='#{blob.location}', name='location')
 		p
 			input(type='hidden',value='PUT',name='_method')
 		p

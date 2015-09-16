@@ -1,3 +1,4 @@
+
 extends ../layout
 
 block content
@@ -6,10 +7,13 @@ block content
     ul
         - each blob, i in blobs
             li
-                = blob.name
-                = blob.badge
-                = blob.dob
-                = blob.isloved
+                = blob.title
+                = blob.description
+                = blob.price
+                = blob.year
+                = blob.location
+
+
                 = blob._id
                 form(action='/blobs/#{blob._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
                     input(type='hidden',value='DELETE',name='_method')

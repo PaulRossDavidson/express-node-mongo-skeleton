@@ -1,8 +1,10 @@
 var mongoose = require('mongoose');  
 var blobSchema = new mongoose.Schema({  
-  name: String,
-  badge: Number,
-  dob: { type: Date, default: Date.now },
-  isloved: Boolean
+  title: String,
+  description: String,
+  price: Number,
+  year: String,
+  location: String,
+ 
 });
 mongoose.model('Blob', blobSchema);

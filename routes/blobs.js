@@ -31,7 +31,7 @@ router.route('/')
                       //HTML response will render the index.jade file in the views/blobs folder. We are also setting "blobs" to be an accessible variable in our jade view
                     html: function(){
                         res.render('blobs/index', {
-                              title: 'All my Blobs',
+                              title: 'Overland Vehicles For Sale',
                               "blobs" : blobs
                           });
                     },
@@ -46,17 +46,23 @@ router.route('/')
     //POST a new blob
     .post(function(req, res) {
         // Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
+        var title = req.body.title;
+        var description = req.body.description;
+        var price = req.body.price;
+        var year = req.body.year;
+        var location = req.body.location;
         var name = req.body.name;
-        var badge = req.body.badge;
-        var dob = req.body.dob;
-        var company = req.body.company;
-        var isloved = req.body.isloved;
+
         //call the create function for our database
         mongoose.model('Blob').create({
+            title : title,
+            description: description,
+            price: price,
+            year: year,
+            location: location,
             name : name,
-            badge : badge,
-            dob : dob,
-            isloved : isloved
+
+
         }, function (err, blob) {
               if (err) {
                   res.send("There was a problem adding the information to the database.");
@@ -123,12 +129,9 @@ router.route('/:id')
         console.log('GET Error: There was a problem retrieving: ' + err);
       } else {
         console.log('GET Retrieving ID: ' + blob._id);
-        var blobdob = blob.dob.toISOString();
-        blobdob = blobdob.substring(0, blobdob.indexOf('T'))
         res.format({
           html: function(){
               res.render('blobs/show', {
-                "blobdob" : blobdob,
                 "blob" : blob
               });
           },
@@ -150,14 +153,13 @@ router.route('/:id/edit')
 	        } else {
 	            //Return the blob
 	            console.log('GET Retrieving ID: ' + blob._id);
-              var blobdob = blob.dob.toISOString();
-              blobdob = blobdob.substring(0, blobdob.indexOf('T'))
+              
 	            res.format({
 	                //HTML response will render the 'edit.jade' template
 	                html: function(){
 	                       res.render('blobs/edit', {
 	                          title: 'Blob' + blob._id,
-                            "blobdob" : blobdob,
+                            "blob" : blob,
 	                          "blob" : blob
 	                      });
 	                 },
@@ -172,22 +174,30 @@ router.route('/:id/edit')
 	//PUT to update a blob by ID
 	.put(function(req, res) {
 	    // Get our REST or form values. These rely on the "name" attributes
-	    var name = req.body.name;
-	    var badge = req.body.badge;
-	    var dob = req.body.dob;
-	    var company = req.body.company;
-	    var isloved = req.body.isloved;
+	    var title = req.body.title;
+      var description = req.body.description;
+      var price = req.body.price;
+      var year = req.body.year;
+      var location = req.body.location;
+
+
+
 
 	    //find the document by ID
 	    mongoose.model('Blob').findById(req.id, function (err, blob) {
 	        //update it
 	        blob.update({
-	            name : name,
-	            badge : badge,
-	            dob : dob,
-	            isloved : isloved
+              title: title,
+              description: description,
+              price: price,
+              year: year,
+              location: location,
+
+
+
 	        }, function (err, blobID) {
 	          if (err) {
+                // throw err;
 	              res.send("There was a problem updating the information to the database: " + err);
 	          } 
 	          else {
