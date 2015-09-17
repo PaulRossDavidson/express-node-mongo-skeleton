@@ -5,6 +5,7 @@ myApp.run(['$rootScope',function($rootScope){
 }])
 .controller('AppCtrl', ['$scope', function($scope) {
 	console.log('controller loaded')
+	$scope.blob = {name: "Paul"}
 
 
 }]);

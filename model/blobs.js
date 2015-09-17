@@ -5,6 +5,7 @@ var blobSchema = new mongoose.Schema({
   price: Number,
   year: String,
   location: String,
+  url: String,
  
 });
 mongoose.model('Blob', blobSchema);

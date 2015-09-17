@@ -1,0 +1,28 @@
+<% include ../header %>
+
+<h1>Index.ejs</h1>
+<div layout="row" layout-sm="column">    
+<% blobs.forEach(function(blob){ %>
+<div flex>
+ <md-card>
+    <img src="<%= blob.url %>" class="md-card-image">
+  <md-card-content>
+    <h1><%= blob.title %></h1>
+    <h3><%= blob.description %></h3>
+    <%= blob.price %>
+    <%= blob.year %>
+    <%= blob.location %>
+  </md-card-content>
+    <%= blob._id %>
+    <form action=<%='/blobs/'+ blob._id + '/edit' %> method='post' enctype='application/x-www-form-urlencoded'>
+        <input type='hidden' value='DELETE' name='_method'>
+        <button type='submit'>Delete</button>
+    </form>
+                    
+            <a href=<%='/blobs/' + blob._id + '/edit' %>>Edit</a>
+            <a href=<%='/blobs/' + blob._id %>>Show</a>
+ </md-card>
+</div>
+<% }) %>
+
+<% include ../footer %>

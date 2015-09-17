@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>proj3 Expedition Vehicles</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.0/angular-material.css">	
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-aria.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.0/angular-material.js"></script>
+
+<script src="/js/app.js"></script>
+</head>
+
+<body ng-app="TacoApp" >
+<div ng-controller="AppCtrl">
+<md-fab-toolbar md-open="demo.isOpen" count="demo.count" md-direction="{{demo.selectedDirection}}">
+<md-fab-trigger class="align-with-text">
+<md-button aria-label="menu" class="md-fab md-primary">
+<md-icon>face</md-icon>
+</md-button>
+</md-fab-trigger>
+<md-toolbar>
+<md-fab-actions class="md-toolbar-tools">
+<md-button aria-label="comment" class="md-icon-button">
+<md-tab label="Hide All" ng-click="bool=true"></md-tab>
+<md-icon>face</md-icon>
+</md-button>
+<md-button aria-label="label" class="md-icon-button">
+<md-icon>face</md-icon>
+</md-button>
+<md-button aria-label="photo" class="md-icon-button">
+<md-icon>book</md-icon>
+</md-button>
+<md-button aria-label="photo" class="md-icon-button">
+<md-icon>book</md-icon>
+</md-button>
+<md-button aria-label="photo" class="md-icon-button">
+<md-icon>book</md-icon>
+</md-button>
+</md-fab-actions>
+</md-toolbar>
+</md-fab-toolbar>

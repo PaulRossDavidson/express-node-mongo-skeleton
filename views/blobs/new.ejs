@@ -1,0 +1,28 @@
+<% include ../header %>
+
+<h1>New Vehicle</h1>
+<form id="formAddBlob" name="addblob" method="post" action="/blobs">
+  <p>Title:
+    <input id="inputTitle" type="string" placeholder="Defender 110" name="title"/>
+  </p>
+  <p>Description:
+    <input id="inputDescription" type="string" placeholder="Trail tested" name="description"/>
+  </p>
+  <p>Price:
+    <input id="inputPrice" type="number" placeholder="$15,000" name="price"/>
+  </p>
+  <p>Year:
+    <input id="inputYear" type="date" placeholder="1990" name="year"/>
+  </p>
+  <p>Location:
+    <input id="inputLocation" type="string" placeholder="Seattle" name="location"/>
+  </p>
+  <p>Image URL:
+    <input id="inputUrl" type="string" placeholder="https://goo.gl/IbtbwL" name="url"/>
+  </p>
+  <p>
+    <button id="btnSubmit" type="submit">submit</button>
+  </p>
+</form>
+
+	<% include ../footer %>
