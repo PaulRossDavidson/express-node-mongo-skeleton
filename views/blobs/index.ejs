@@ -1,24 +1,25 @@
 <% include ../header %>
 
-<h1>Index.ejs</h1>
+<h1>A Currated list of Expedition Vehicles for sale.</h1>
 <div layout="row" layout-sm="column" layout-wrap>    
 <% blobs.forEach(function(blob){ %>
 <div flex30>
  <md-card style="width:440px">
-    <img src="<%= blob.url %>" class="md-card-image">
+    <a href=<%='/blobs/' + blob._id %> >
+        <img src="<%= blob.url %>" class="md-card-image">
+    </a>
+            
   <md-card-content>
     <h1><%= blob.title %></h1>
-    <h3><%= blob.price %></h3>
+    <h2>$<%= blob.price %></h2>
     <h3><%= blob.location %></h3>
   </md-card-content>
-    <%= blob._id %>
     <form action=<%='/blobs/'+ blob._id + '/edit' %> method='post' enctype='application/x-www-form-urlencoded'>
         <input type='hidden' value='DELETE' name='_method'>
         <button type='submit'>Delete</button>
     </form>
                     
             <a href=<%='/blobs/' + blob._id + '/edit' %>>Edit</a>
-            <a href=<%='/blobs/' + blob._id %>>Show</a>
  </md-card>
 </div>
 <% }) %>
