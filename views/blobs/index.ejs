@@ -3,8 +3,8 @@
 <h1>A Currated list of Expedition Vehicles for sale.</h1>
 <div layout="row" layout-sm="column" layout-wrap>    
 <% blobs.forEach(function(blob){ %>
-<div flex30>
- <md-card style="width:440px">
+<div flex="30" layout-wrap>
+ <md-card style="width:95%" >
     <a href=<%='/blobs/' + blob._id %> >
         <img src="<%= blob.url %>" class="md-card-image">
     </a>

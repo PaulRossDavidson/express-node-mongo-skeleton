@@ -1,5 +1,6 @@
 html {
-  background-color: #FFFFCC;
+  /*background-color: #FFFFCC;*/
+  background-image: url(http://goo.gl/vcjM7H);
 	
 }
 
@@ -7,7 +8,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
-}
+} 
 
 a {
   color: #00B7FF;
@@ -20,4 +21,17 @@ h2 {
 }
 h3 {
 	text-align: center;
+}
+md-card {
+	background-color: ;
+	width: 95%;
+	position: center;
+	text-align: center;
+
+}
+div {
+	position: center;
+	margin-right: auto;
+	margin-left: auto;
+	
 }
