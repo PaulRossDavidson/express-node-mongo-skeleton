@@ -2,11 +2,13 @@
 
 <h1>View this Vehicle</h1>
     
-<img src="<%= blob.url %>" >
+<h1><img src="<%= blob.url %>" ></h1>
 <p>Title: <%= blob.title %></p>
 <p>Description: <%= blob.description %></p>
-<p>Price: <%= blob.price %></p>
+<p>Price: $<%= blob.price %></p>
 <p>Year: <%= blob.year %></p>
 <p>Location: <%= blob.location %></p>
+<p>Source: <%= blob.source %> </p> 
+<p>I hope you enjoyed looking</p>
 
 <% include ../footer %>

@@ -6,6 +6,7 @@ var blobSchema = new mongoose.Schema({
   year: String,
   location: String,
   url: String,
+  source: String,
  
 });
 mongoose.model('Blob', blobSchema);

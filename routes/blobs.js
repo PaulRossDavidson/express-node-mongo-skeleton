@@ -52,6 +52,7 @@ router.route('/')
         var year = req.body.year;
         var location = req.body.location;
         var url = req.body.url;
+        var source = req.body.source;
 
         //call the create function for our database
         mongoose.model('Blob').create({
@@ -60,7 +61,8 @@ router.route('/')
             price: price,
             year: year,
             location: location,
-            url : url,
+            url: url,
+            source: source,
 
 
         }, function (err, blob) {
@@ -180,6 +182,7 @@ router.route('/:id/edit')
       var year = req.body.year;
       var location = req.body.location;
       var url = req.body.url;
+      var source = req.body.source;
 
 
 
@@ -194,6 +197,7 @@ router.route('/:id/edit')
               year: year,
               location: location,
               url: url,
+              source: source,
 
 
 
