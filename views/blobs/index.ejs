@@ -1,17 +1,19 @@
 <% include ../header %>
+<div id="header">
+    <h1 >Overland It!</h1>
 
-<h1>A Currated list of Expedition Vehicles for sale.</h1>
+</div>
 <div layout="row" layout-sm="column" layout-wrap>    
 <% blobs.forEach(function(blob){ %>
 <div flex="30" layout-wrap>
- <md-card style="width:95%" >
+ <md-card>
     <a href=<%='/blobs/' + blob._id %> >
         <img src="<%= blob.url %>" class="md-card-image">
     </a>
             
   <md-card-content>
-    <h1><%= blob.title %></h1>
-    <h2>$<%= blob.price %></h2>
+    <h2><%= blob.title %></h2>
+    <h3>$<%= blob.price %></h3>
     <h3><%= blob.location %></h3>
   </md-card-content>
     <form action=<%='/blobs/'+ blob._id + '/edit' %> method='post' enctype='application/x-www-form-urlencoded'>

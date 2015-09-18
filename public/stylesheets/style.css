@@ -8,30 +8,54 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
+  text-align: center;
 } 
+#header {
+  padding-top: 5%;
+  padding-bottom: 15%;
 
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10%;
+  background-image: url('https://goo.gl/6lK8da');
+  background-size: 100%;
+  background-color: #FCFBE3;
+  border-radius: 10%;
+
+}
 a {
   color: #00B7FF;
 }
 h1 {
-	text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+
 }
 h2 {
-	text-align: center;
+  font-size: 2em;
 }
 h3 {
-	text-align: center;
+  font-size: 2em;
 }
+
 md-card {
-	background-color: ;
+	background-color: #F5F5DC;
 	width: 95%;
 	position: center;
 	text-align: center;
-
+	border-radius: 5%;
 }
 div {
 	position: center;
 	margin-right: auto;
-	margin-left: auto;
-	
+	margin-left: auto;	
 }
+.md-fab-toolbar {
+  text-align: left;
+  margin-top: -3%;
+}
+.md-fab-trigger {
+  background-color: green;
+
+}
+
