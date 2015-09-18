@@ -41,7 +41,7 @@ p {
   font-size: 2em;
 }
 md-card {
-	background: linear-gradient(#C0C0C0, #DEB887);
+	background: linear-gradient(#DEB887, #C0C0C0);
 	width: 95%;
 	position: center;
 	text-align: center;
