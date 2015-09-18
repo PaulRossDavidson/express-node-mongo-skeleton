@@ -18,13 +18,9 @@ body {
   margin-left: auto;
   margin-bottom: 10%;
   background-image: url('https://goo.gl/6lK8da');
-  
-  background-repeat: no-repeat;
-  background-size: 100%, 100%;
-  background-position: 100%, 100%;
   background-size: cover;
   background-color: #FCFBE3;
-  border-radius: 10%;
+  border-radius: 5%;
 
 }
 a {
