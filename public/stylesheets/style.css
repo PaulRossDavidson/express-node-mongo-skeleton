@@ -1,27 +1,33 @@
 html {
   /*background-color: #FFFFCC;*/
-  background-image: url(http://goo.gl/vcjM7H);
-}
+  background-size: cover;
+  margin: 0px;
 
+}
 body {
+    text-align: center;
+}
+#header {
+  padding-top: 5%;
+  padding-bottom: 15%;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url('/images/header.jpg');
+  background-color: #FCFBE3;
+  background-size: cover;
+}
+#content {
+  background-attachment: fixed;
+  background-image: url("/images/map.jpg");
+  background-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
   text-align: center;
 } 
-#header {
-  padding-top: 5%;
-  padding-bottom: 15%;
-
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 10%;
-  background-image: url('https://goo.gl/6lK8da');
-  background-size: cover;
-  background-color: #FCFBE3;
-  border-radius: 5%;
-
-}
 a {
   color: #00B7FF;
 }
@@ -43,6 +49,7 @@ md-card {
 	background: linear-gradient(#DEB887, #C0C0C0);
 	width: 95%;
 	position: center;
+  margin-top: 5%;
 	text-align: center;
 	border-radius: 5%;
 }
