@@ -13,7 +13,12 @@
     <h3>$<%= blob.price %></h3>
     <h3><%= blob.location %></h3>
   </md-card-content>
-
+    <form action=<%='/blobs/'+ blob._id + '/edit' %> method='post' enctype='application/x-www-form-urlencoded'>
+        <input type='hidden' value='DELETE' name='_method'>
+        <button type='submit'>Delete</button>
+    </form>
+                    
+            <a href=<%='/blobs/' + blob._id + '/edit' %>>Edit</a>
  </md-card>
 </div>
 <% }) %>
